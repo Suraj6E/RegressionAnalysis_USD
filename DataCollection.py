@@ -34,7 +34,9 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.183'
 }
 
-USD_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/38ec9435-34cc-4704-9445-80fabf6c0120/historical'
+# USD_manufaturing_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/38ec9435-34cc-4704-9445-80fabf6c0120/historical'
+# USD_Service_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/5085ec6f-0c90-43d0-83f0-b936a41da1e7/historical'
+USD_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/ac172f6c-6b25-4a45-a986-c96789740c8b/historical'
 USD_PMI = get_data_from_api(USD_PMI_URL, headers)
 
 if USD_PMI:
@@ -42,7 +44,7 @@ if USD_PMI:
     #print(USD_PMI)
 
       # Save the api_data to a JSON file
-    with open('./data/USD_PMI.json', 'w') as json_file:
+    with open('./data/USD_Composite_PMI.json', 'w') as json_file:
         json.dump(USD_PMI, json_file)
 else:
     print("Failed to retrieve data from the API.")
