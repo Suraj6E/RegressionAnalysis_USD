@@ -36,15 +36,18 @@ headers = {
 
 # USD_manufaturing_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/38ec9435-34cc-4704-9445-80fabf6c0120/historical'
 # USD_Service_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/5085ec6f-0c90-43d0-83f0-b936a41da1e7/historical'
-USD_PMI_URL = 'https://calendar-api.fxstreet.com/en/api/v1/events/ac172f6c-6b25-4a45-a986-c96789740c8b/historical'
-USD_PMI = get_data_from_api(USD_PMI_URL, headers)
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/ac172f6c-6b25-4a45-a986-c96789740c8b/historical'
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/0ba3bb41-ebb9-4a54-89f3-36346484dcfb/historical'
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/79282c38-c914-4080-9f7f-a085c86ba308/historical'
+api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/2e1d69f3-8273-4096-b01b-8d2034d4fade/historical'
+data = get_data_from_api(api_url, headers)
 
-if USD_PMI:
+if data:
     # Process the retrieved data here
-    #print(USD_PMI)
+    #print(data)
 
       # Save the api_data to a JSON file
-    with open('./data/USD_Composite_PMI.json', 'w') as json_file:
-        json.dump(USD_PMI, json_file)
+    with open('./data/USD_Manufacturing_New_Orders_Index_ISM.json', 'w') as json_file:
+        json.dump(data, json_file)
 else:
     print("Failed to retrieve data from the API.")
