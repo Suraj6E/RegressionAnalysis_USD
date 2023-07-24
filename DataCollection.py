@@ -39,7 +39,17 @@ headers = {
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/ac172f6c-6b25-4a45-a986-c96789740c8b/historical'
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/0ba3bb41-ebb9-4a54-89f3-36346484dcfb/historical'
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/79282c38-c914-4080-9f7f-a085c86ba308/historical'
-api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/2e1d69f3-8273-4096-b01b-8d2034d4fade/historical'
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/2e1d69f3-8273-4096-b01b-8d2034d4fade/historical'
+# USD_Factory_Orders_MoM = 'https://calendar-api.fxstreet.com/en/api/v1/events/583bbfd1-2cf5-4f17-823e-e5ce34f91f49/historical'
+# ISM_Manufacturing_Prices_Paid = 'https://calendar-api.fxstreet.com/en/api/v1/events/3b4f3bf2-fe18-4e5d-86af-8edc17d68680/historical'
+# USD_ISM_Manufacturing_PMI = 'https://calendar-api.fxstreet.com/en/api/v1/events/2e1d69f3-8273-4096-b01b-8d2034d4fade/historical'
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/af5d396d-eff7-4023-add2-5a208861e63d/historical' #Producer Price Index ex Food & Energy (MoM)
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/ae8bd4b2-1a5f-4b9f-9b9c-6df04d23faee/historical' #Producer Price Index ex Food & Energy (YoY)
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/cba6f39e-5566-4fc8-86b3-1d0771fd5e3b/historical'  #Monthly Budget Statement
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/375f089e-b51b-4c95-9217-188bb36803f3/historical'  #UoM 5-year Consumer Inflation Expectation
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/31b216da-2502-4428-af5b-d3c54b68ebe4/historical'  #Retail Sales (MoM)
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/a2a2843d-443a-480a-b83a-a8f0dd0c3f04/historical'  #Retail Sales Control Group
+api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/a2a2843d-443a-480a-b83a-a8f0dd0c3f04/historical'  
 data = get_data_from_api(api_url, headers)
 
 if data:
@@ -47,7 +57,7 @@ if data:
     #print(data)
 
       # Save the api_data to a JSON file
-    with open('./data/USD_Manufacturing_New_Orders_Index_ISM.json', 'w') as json_file:
+    with open('./data/USD - Retail Sales Control Group.json', 'w') as json_file:
         json.dump(data, json_file)
 else:
     print("Failed to retrieve data from the API.")
