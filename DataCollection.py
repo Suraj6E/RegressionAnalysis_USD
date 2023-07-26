@@ -49,7 +49,10 @@ headers = {
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/375f089e-b51b-4c95-9217-188bb36803f3/historical'  #UoM 5-year Consumer Inflation Expectation
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/31b216da-2502-4428-af5b-d3c54b68ebe4/historical'  #Retail Sales (MoM)
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/a2a2843d-443a-480a-b83a-a8f0dd0c3f04/historical'  #Retail Sales Control Group
-api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/a2a2843d-443a-480a-b83a-a8f0dd0c3f04/historical'  
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/2635188a-b377-4179-864c-029cad0ed529/historical'  #Industrial Production (MoM)
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/9ba65d91-c2d2-4e4b-b6f3-dfe3677dc980/historical'  #JOLTS Job Openings
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/b7abce59-89c3-42cc-8696-c4b6877cdee3/historical'  #Average Hourly Earnings (MoM)
+api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/932c21fa-f664-40e1-a921-dbeb452f0081/historical'  #Unemployment Rate
 data = get_data_from_api(api_url, headers)
 
 if data:
@@ -57,7 +60,7 @@ if data:
     #print(data)
 
       # Save the api_data to a JSON file
-    with open('./data/USD - Retail Sales Control Group.json', 'w') as json_file:
+    with open('./data/USD - Unemployment Rate.json', 'w') as json_file:
         json.dump(data, json_file)
 else:
     print("Failed to retrieve data from the API.")
