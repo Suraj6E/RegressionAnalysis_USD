@@ -53,7 +53,8 @@ headers = {
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/9ba65d91-c2d2-4e4b-b6f3-dfe3677dc980/historical'  #JOLTS Job Openings
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/b7abce59-89c3-42cc-8696-c4b6877cdee3/historical'  #Average Hourly Earnings (MoM)
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/fcfae951-09a7-449e-b6fe-525e1335aaba/historical'  #Fed Interest Rate Decision
-api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/fcfae951-09a7-449e-b6fe-525e1335aaba/historical'  #
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/9c689bbf-af2a-4f65-81a8-c5f5e2b78d70/historical'  #Initial Jobless Claims
+api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/9c689bbf-af2a-4f65-81a8-c5f5e2b78d70/historical'  #Initial Jobless Claims
 data = get_data_from_api(api_url, headers)
 
 if data:
@@ -61,7 +62,7 @@ if data:
     #print(data)
 
       # Save the api_data to a JSON file
-    with open('./data/USD - Interest Rate.json', 'w') as json_file:
+    with open('./data/USD - Initial Jobless Claims.json', 'w') as json_file:
         json.dump(data, json_file)
 else:
     print("Failed to retrieve data from the API.")
