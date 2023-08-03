@@ -54,7 +54,11 @@ headers = {
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/b7abce59-89c3-42cc-8696-c4b6877cdee3/historical'  #Average Hourly Earnings (MoM)
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/fcfae951-09a7-449e-b6fe-525e1335aaba/historical'  #Fed Interest Rate Decision
 # api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/9c689bbf-af2a-4f65-81a8-c5f5e2b78d70/historical'  #Initial Jobless Claims
-api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/9c689bbf-af2a-4f65-81a8-c5f5e2b78d70/historical'  #Initial Jobless Claims
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/fd5a3b53-db1c-4ec4-8393-ff91ca73a272/historical'  #Core Personal Consumption Expenditures
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/f056cc38-d62a-4a1f-8660-8160867fe480/historical'  #Gross Domestic Product Price
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/a25fb503-3399-4cb2-9c48-b335a966faf7/historical'  #Challenger Job Cuts
+# api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/5bbf4174-08fe-4294-a2bf-2226b4b9b802/historical'  #Building Permits
+api_url = 'https://calendar-api.fxstreet.com/en/api/v1/events/6c5853c1-a409-4722-bdea-17ad5d8a193f/historical'  #ISM Services PMI
 data = get_data_from_api(api_url, headers)
 
 if data:
@@ -62,7 +66,7 @@ if data:
     #print(data)
 
       # Save the api_data to a JSON file
-    with open('./data/USD - Initial Jobless Claims.json', 'w') as json_file:
+    with open('./data/USD - ISM Services PMI.json', 'w') as json_file:
         json.dump(data, json_file)
 else:
     print("Failed to retrieve data from the API.")
